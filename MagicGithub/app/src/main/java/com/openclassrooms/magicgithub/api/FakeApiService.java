@@ -1,12 +1,9 @@
 package com.openclassrooms.magicgithub.api;
 
 
-import android.util.Log;
-import com.openclassrooms.magicgithub.model.User;
-import java.util.Collections;
-import java.util.List;
 
-import static com.openclassrooms.magicgithub.api.FakeApiServiceGenerator.FAKE_USERS_RANDOM;
+import com.openclassrooms.magicgithub.model.User;
+import java.util.List;
 import static com.openclassrooms.magicgithub.api.FakeApiServiceGenerator.generateUsers;
 
 public class FakeApiService implements ApiService {
@@ -20,9 +17,6 @@ public class FakeApiService implements ApiService {
     @Override
     public List<User> getUsers() {
         // TODO: A modifier
-        /* before modification, return null
-        now return List of users
-         */
         return users;
     }
 
@@ -33,19 +27,6 @@ public class FakeApiService implements ApiService {
     @Override
     public void generateRandomUser() {
         // TODO: A modifier
-
-        /* FIRST VERSION :
-        List<User> randomUser = FAKE_USERS_RANDOM;
-        Collections.shuffle(randomUser);
-        if(!(users.contains(randomUser.get(0)))){
-            users.add(randomUser.get(0));
-        }else {
-            Log.d("DEBUGKEY", "User already in the list");
-        }
-
-        FINALLY :
-        using method created on User class for randomize user*/
-
         users.add(User.random());
 
     }
@@ -57,10 +38,6 @@ public class FakeApiService implements ApiService {
     public void deleteUser(User user) {
         // TODO: A modifier
 
-        /*use foreach loop for searching specific user in the list of possible (users)
-        and delete this one only
-
-         */
         for (User element : users) {
             if (element == user){
                 users.remove(element);

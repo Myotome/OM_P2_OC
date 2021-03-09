@@ -1,6 +1,5 @@
 package com.openclassrooms.magicgithub;
 
-import com.openclassrooms.magicgithub.api.FakeApiServiceGenerator;
 import com.openclassrooms.magicgithub.di.Injection;
 import com.openclassrooms.magicgithub.model.User;
 import com.openclassrooms.magicgithub.repository.UserRepository;
