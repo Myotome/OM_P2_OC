@@ -37,14 +37,7 @@ public class FakeApiService implements ApiService {
     @Override
     public void deleteUser(User user) {
         // TODO: A modifier
-
-        for (User element : users) {
-            if (element == user){
-                users.remove(element);
-                break;
-            }
-
-        }
+        users.remove(user);
 
     }
 }
